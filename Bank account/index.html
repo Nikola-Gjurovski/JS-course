@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+<nav>
+    <div id="login">
+        <h2 id="welcome">Log in to get started</h2>
+    </div>
+    <div id="logo">
+        <img src="logo.png"width="50px">
+
+    </div>
+    <div id="check">
+        <input id="user" type="text" placeholder="user">
+        <input id="pin" type="text" placeholder="PIN">
+        <button onclick="vlezi()" id="eenter">→</button>
+
+    </div>
+</nav>
+<main>
+    <div id="situation">
+        <div>
+            <div>
+                <h1>Current balance</h1>
+                <p id="datum">As of 05/03/2037</p>
+            </div>
+        </div>
+        <div>
+            <h1 id="zbir">0000$</h1>
+        </div>
+    </div>
+    <div id="menu">
+        <div id="money">
+            <div id="project">
+               <!--<div class="clones">
+                    <div class="deposite">
+                        <p>8 deposit</p>
+
+                    </div>
+                    <div class="price">
+                        <p>1300$</p>
+                    </div>
+                </div>-->
+            </div>
+        </div>
+        <div id="account">
+            <div id="yellow">
+                <div>
+                    <h2>Transfer money</h2>
+                </div>
+                <div id="yellow-transer">
+                    <input id="transfer" type="text"placeholder="Transfer to">
+                    <input id="amount1" type="text" placeholder="Amount">
+                    <button onclick="transfer()">→</button>
+
+                </div>
+
+            </div>
+            <div id="green">
+                <div>
+                    <h2>Request loan</h2>
+                </div>
+                <div id="green-transer">
+                    <input id= "Amount2" type="text" placeholder="Amount">
+
+                    <button onclick="requestloan()">→</button>
+
+                </div>
+
+            </div>
+            <div id="red">
+                <div>
+                    <h2>Close account</h2>
+                </div>
+                <div id="red-transer">
+                    <input id="confirmuser" type="text"placeholder="Confirm user">
+                    <input id="confirmPIN" type="text" placeholder="Confirm PIN">
+                    <button onclick="confimr()">→</button>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div id="results">
+        <div>
+            <h2>In <span id="pozitivni">5020 </span></h2>
+        </div>
+        <div>
+            <h2>out <span id="negativni">1180 </span> </h2>
+        </div>
+        <div>
+            <h2>interest <span id="interest"> 58.4$ </span></h2>
+        </div>
+      <div id="ssort">
+          <button onclick="sorting()">sort</button>
+      </div>
+    </div>
+</main>
+</body>
+</html>

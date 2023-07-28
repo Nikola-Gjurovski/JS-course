@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="shortcut icon" type="image/png" href="/icon.png" />
+
+    <link
+            href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap"
+            rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <link
+            rel="stylesheet"
+            href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+            integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+            crossorigin=""
+    />
+    <script
+            defer
+            src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+            integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+            crossorigin=""
+    ></script>
+
+
+</head>
+<body>
+<div id="main">
+    <div id="left_corcner">
+        <div id="header">
+            <div>
+            <img src="5817087.png"width="100">
+            </div>
+            <div>
+            <h1>SportsMap</h1>
+                </div>
+        </div>
+
+
+        <div id="block">
+             <form id="najava_blok">
+            <div id="red1">
+                <ul>
+                    <li> <p>Type</p>
+                    </li>
+                    <li>
+                        <select>
+                            <option value="Running">Running</option>
+                            <option value="Cycling">Cycling</option>
+                        </select>
+                    </li>
+                    <li>
+                        <p>Distance</p>
+                    </li>
+                    <li>
+                        <input class="golem a" type="text" placeholder="km">
+                    </li>
+                </ul>
+            </div>
+            <div id="red2">
+                <ul>
+                    <li> <p>Duration</p>
+                    </li>
+                    <li>
+                       <input class="golem b" type="text" placeholder="min">
+                    </li>
+                    <li>
+                        <p class="pcad">Cadance</p>
+                    </li>
+                    <li>
+                        <input  class="golem min c" placeholder="step/min">
+                        <button type="submit"></button>
+                    </li>
+                </ul>
+            </div>
+        </form>
+          <!-- <div class="sports">
+            <div class="red3">
+                <div class="h3">
+                <h3>Cycling on July 15</h3>
+                </div>
+                <ul>
+                    <li>
+                        <span>🚴‍</span>
+                        <span>67 km</span>
+                    </li>
+                    <li>
+                        <span>⏱</span>
+                        <span>78 min</span>
+                    </li>
+                    <li>
+                        <span>⚡️</span>
+                        <span>51.5 km/h</span>
+                    </li>
+                    <li>
+                        <span>⛰</span>
+                        <span>87 m</span>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+            <div class="sports2">
+                <div class="red3">
+                    <div class="h3">
+                        <h3>Running on July 15</h3>
+                    </div>
+                    <ul>
+                        <li>
+                            <span>🏃‍♂️</span>
+                            <span>67 km</span>
+                        </li>
+                        <li>
+                            <span>⏱</span>
+                            <span>78 min</span>
+                        </li>
+                        <li>
+                            <span>⚡️</span>
+                            <span>51.5 km/h</span>
+                        </li>
+                        <li>
+                            <span>🦶</span>
+                            <span>87 m</span>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>-->
+        </div>
+
+
+        <p id="footer">
+            Created by
+            <a target="_blank" href="https://github.com/Nikola-Gjurovski?tab=repositories">   Nikola   Gjurovski</a>
+
+    </div>
+    <div id="map">
+
+    </div>
+</div>
+<script defer src="script.js"></script>
+</body>
+</html>

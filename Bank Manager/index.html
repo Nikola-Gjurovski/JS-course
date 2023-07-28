@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+<div id="login">
+    <div>
+  <button onclick="exitt()">&times;</button>
+    </div>
+    <h2>Open your bank account in just<span id="loginzeleno"> 5 minutes</span></h2>
+    <div id="najava">
+        <p>First Name</p>
+        <input type="text">
+    </div>
+    <div id="najava2">
+        <p>Last Name</p>
+        <input type="text">
+    </div>
+    <div id="najava3">
+        <p>Email Address</p>
+        <input type="text">
+    </div>
+    <div id="step">
+        <button>Next Step &rarr;</button>
+    </div>
+    </div>
+
+<div id="all">
+<header class="header">
+    <nav class="nav">
+        <img
+                src="img/logo.png"
+                alt="Bankist logo"
+                class="nav__logo"
+                id="logo"
+        />
+        <ul class="nav__links">
+            <li class="nav__item">
+                <a id="Feauturs" class="nav__link" href="#section--1">Features</a>
+            </li>
+            <li class="nav__item">
+                <a  id="Oper" class="nav__link" href="#section--2">Operations</a>
+            </li>
+            <li class="nav__item">
+                <a id="testominals" class="nav__link" href="#section--3">Testimonials</a>
+            </li>
+            <li class="nav__item">
+                <a id="pol" class="nav__link nav__link--btn btn--show-modal" href="#">Open account</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="header__title">
+        <h1>
+            When
+            <!-- Green highlight effect -->
+            <span class="highlight">banking</span>
+            meets<br />
+            <span class="highlight">minimalist</span>
+        </h1>
+        <h4>A simpler banking experience for a simpler life.</h4>
+        <button id="learnmore" class="btn--text btn--scroll-to">Learn more &DownArrow;</button>
+        <img
+                src="img/hero.png"
+                class="header__img"
+                alt="Minimalist bank items"
+        />
+    </div>
+</header>
+<hr>
+<section id="feauture" class="blocks">
+    <div id="feautures" class="blocks">
+        <h4>Features</h4>
+        <h3 class="section__header">
+            Everything you need in a modern bank and more.
+        </h3>
+    </div>
+    <div id="container1">
+        <div class="slikata">
+            <img class="sliki" src="img/digital-lazy.jpg" data-src="img/digital.jpg" width="300">
+        </div>
+        <div>
+           <div class="ovde">
+             <svg>
+                <use xlink:href="img/icons.svg#icon-monitor"></use>
+              </svg>
+           </div>
+
+            <div class="paragraf">
+                <h2>100% digital bank</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde alias
+                    sint quos? Accusantium a fugiat porro reiciendis saepe quibusdam
+                    debitis ducimus.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div id="container2">
+
+        <div>
+            <div class="ovde">
+                <svg>
+                    <use xlink:href="img/icons.svg#icon-trending-up"></use>
+                </svg>
+            </div>
+
+            <div class="paragraf">
+                <h2>Watch your money grow</h2>
+                <p>
+                    Nesciunt quos autem dolorum voluptates cum dolores dicta fuga
+                    inventore ab? Nulla incidunt eius numquam sequi iste pariatur
+                    quibusdam!
+                </p>
+            </div>
+        </div>
+        <div class="slikata">
+            <img  class="sliki" src="img/grow-lazy.jpg"
+                 data-src="img/grow.jpg"
+                 width="300">
+        </div>
+    </div>
+    <div id="container3">
+        <div class="slikata">
+            <img class="sliki" src="img/card-lazy.jpg" data-src="img/card.jpg" width="300">
+        </div>
+        <div>
+            <div class="ovde">
+                <svg>
+                    <use xlink:href="img/icons.svg#icon-credit-card"></use>
+                </svg>
+            </div>
+
+            <div class="paragraf">
+                <h2>Free debit card included</h2>
+                <p>
+                    Quasi, fugit in cumque cupiditate reprehenderit debitis animi enim
+                    eveniet consequatur odit quam quos possimus assumenda dicta fuga
+                    inventore ab.
+                </p>
+            </div>
+        </div>
+    </div>
+
+</section>
+<hr>
+<section id="operations" class="blocks">
+    <div id="operation">
+        <h4>Opearations</h4>
+        <h3 class="section__header">
+            Everything as simple as possible,but no simpler.
+        </h3>
+    </div>
+    <div id="color-buttons">
+        <div id="here-buttons">
+            <div>
+            <button  onclick="yellow()" id="yellow">
+                <b>01 Instant Transfers</b>
+            </button>
+                </div>
+            <div>
+            <button onclick="grennnnn()" id="green">
+                <b>02 Instant Loans</b>
+            </button>
+                </div>
+            <div>
+            <button onclick="red()" id="red">
+                <b>03 Instant Closing</b>
+            </button>
+            </div>
+        </div>
+    </div>
+    <div id="inside">
+        <div id="carpet">
+            <div id="ovdeka" class="ovdeka">
+         <svg>
+             <use xlink:href="img/icons.svg#icon-upload"></use>
+         </svg>
+            </div>
+            <div id="carpet-header">
+                <h2>
+                    Tranfser money to anyone, instantly! No fees, no BS.
+                </h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+                    ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat.
+                </p>
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+</section>
+<hr>
+<section id="not-sure" class="blocks">
+    <div id="notsures">
+        <h4>NOT SURE YET</h4>
+        <h3 class="section__header">
+            Millions of Bankist are already makimg their lifes simpler.
+        </h3>
+    </div>
+    <div id="scroll">
+
+        <div id="out">
+        <div class="go">
+            <h2>
+                Best financial decision ever!
+            </h2>
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Accusantium quas quisquam non? Quas voluptate nulla minima
+                deleniti optio ullam nesciunt, numquam corporis et asperiores
+                laboriosam sunt, praesentium suscipit blanditiis. Necessitatibus
+                id alias reiciendis, perferendis facere pariatur dolore veniam
+                autem esse non voluptatem saepe provident nihil molestiae.
+            </p>
+            <div id="character">
+                <div>
+                <img src="img/user-1.jpg">
+                </div>
+                <div>
+                    <h3>
+                        Miyah Miles
+                    </h3>
+                    <p>London,UK</p>
+                </div>
+            </div>
+
+        </div>
+        <div class="go">
+            <h2>
+                The last step to becoming a complete minimalist
+            </h2>
+            <p>
+                Quisquam itaque deserunt ullam, quia ea repellendus provident,
+                ducimus neque ipsam modi voluptatibus doloremque, corrupti
+                laborum. Incidunt numquam perferendis veritatis neque repellendus.
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo
+                deserunt exercitationem deleniti.
+            </p>
+            <div class="character">
+                <div>
+                    <img src="img/user-2.jpg">
+                </div>
+                <div>
+                    <h3>
+                        Aarav Lynn
+                    </h3>
+                    <p>San Francisko,USA</p>
+                </div>
+            </div>
+
+        </div>
+        <div class="go">
+            <h2>
+                Finally free from old-school banks
+            </h2>
+            <p>
+                Debitis, nihil sit minus suscipit magni aperiam vel tenetur
+                incidunt commodi architecto numquam omnis nulla autem,
+                necessitatibus blanditiis modi similique quidem. Odio aliquam
+                culpa dicta beatae quod maiores ipsa minus consequatur error sunt,
+                deleniti saepe aliquid quos inventore sequi. Necessitatibus id
+                alias reiciendis, perferendis facere.
+            </p>
+            <div class="character">
+                <div>
+                    <img src="img/user-3.jpg">
+                </div>
+                <div>
+                    <h3>
+                        Francisko Gomes
+                    </h3>
+                    <p>London,UK</p>
+                </div>
+            </div>
+
+        </div>
+        </div>
+
+
+    </div>
+    <div id="butn">
+        <div>
+        <button id="left">&larr;</button>
+        </div>
+        <div>
+        <button id="right">&rarr;</button>
+        </div>
+    </div>
+</section>
+</div>
+</body>
+<script src="script.js"></script>
+</html>

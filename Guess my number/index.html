@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>JavaScript Fundamentals – Part 1</title>
+    <style>
+        body{
+            /*font-family: 'Press Start 2P', sans-serif;*/
+           /* font-family: 'Press Start 2P', cursive;*/
+            font-family: 'Press Start 2P', 'Pixelated', 'Arcade Classic', cursive;
+            color: #eee;
+            background-color: #222;
+        }
+      #osnova{
+          display: flex;
+         justify-content: space-between;
+      }
+      #osnova button{
+          width: 8em;
+          height: 3em;
+          font-size: 18px;
+          font-family: 'Press Start 2P', 'Pixelated', 'Arcade Classic', cursive;
+
+      }
+      #center{
+          display: flex;
+          justify-content: center;
+          margin-top: 3em;
+      }
+      #linija{
+          border-bottom: 3px solid white;
+          display: flex;
+          justify-content: center;
+          margin-top: 6rem;
+
+
+      }
+      #linija div {
+          position: absolute;
+          width: 8rem;
+          height: 6rem;
+          background-color:white;
+          display: flex;
+         justify-content: center;
+          transform: translate(0,-50%);
+
+
+
+      }
+      #linija div h1{
+          text-align: center;
+          color: #222222;
+      }
+      #matematika{
+          display: flex;
+          justify-content: space-evenly;
+          margin-top: 10rem;
+      }
+      .input input{
+         width: 10rem;
+          height: 6rem;
+          border: 2px solid white;
+          background: none;
+          text-align: center;
+          color: white;
+          font-size: 20px;
+          margin-bottom: 3rem;
+          font-family: 'Press Start 2P', 'Pixelated', 'Arcade Classic', cursive;
+      }
+      .input button{
+          width: 6em;
+          height: 4em;
+          font-size: 18px;
+          font-family: 'Press Start 2P', 'Pixelated', 'Arcade Classic', cursive;
+
+      }
+      #button{
+          display: flex;
+          justify-content: center;
+      }
+
+
+ul li{
+    list-style: none;
+}
+#score p{
+    margin-bottom: 3rem;
+}
+ul{
+  margin-left: -2em;
+}
+    </style>
+</head>
+<body>
+<div id="osnova">
+    <div>
+<button id="again">Again!</button>
+    </div>
+    <div>
+    <p>(Between 1 and 20)</p>
+    </div>
+
+</div>
+<div id="center">
+    <h1>Guess my number!</h1>
+</div>
+<div id="linija">
+
+    <div>
+        <h1 id="the_number"> ?</h1>
+    </div>
+</div>
+
+<div id="matematika">
+    <div class="input">
+        <input id="number" type="number" max="20" min="1" >
+        <br>
+        <div id="button">
+        <button id="check">Check!</button>
+        </div>
+    </div>
+    <div id="score">
+     <p id="messege">Start guessing ...</p>
+        <ul>
+            <li>💯 Score:<span id="rightnow"> 20</span></li>
+            <li>🏆Highest score:<span id="hightscore"> 0</span></li>
+        </ul>
+    </div>
+</div>
+<script>
+var random=Math.floor(Math.random()*20)+1;
+console.log(random)
+let brojac=20;
+let max=0;
+let counter=0;
+let sino=0;
+let zolto=0;
+let body=document.querySelector("body");
+
+let messege=function (messeges){
+    document.querySelector("#messege").textContent=messeges;
+};
+document.querySelector("#check").addEventListener('click',function (){
+    let number=document.getElementById("number");
+      var num=parseInt(number.value);
+    //console.log(number);
+    if(brojac==1){
+        document.querySelector("body").style.background="red";
+        document.querySelector("#check").disabled=true;
+        document.querySelector("#the_number").textContent=random;
+       // clearInterval(zinterval);
+       // clearInterval(sinterval);
+        clearInterval(interval);
+
+        messege("😢GAME OVER");
+    }
+
+     else if(num<0 || num>20){
+        messege("⚠ not a number");
+        brojac--;
+        document.querySelector("#rightnow").textContent=brojac;
+    }
+
+     else if(random==num){
+        let number=document.getElementById("number");
+          document.querySelector("body").style.background="green";
+          messege("🎉 Congratulation!");
+         if(max<brojac){
+              max=brojac;
+          }
+         number.disabled=true;
+          document.querySelector("#hightscore").textContent=max;
+         document.querySelector("#the_number").textContent=random;
+        // document.querySelector("#check").disabled=true;
+
+
+
+
+    }
+    else{
+        if(num==random+3 || num==random+2 || num==random+1 || num==random-3 || num==random-2 || num==random-1 ){
+            messege("😁 You are close");
+            brojac--;
+            document.querySelector("#rightnow").textContent=brojac;
+           // zinterval=setInterval(zzolto,10);
+
+
+
+
+        }
+        else{
+            //console.log(num);
+            if(num>random){
+                messege("📈 Too big");
+                brojac--;
+                document.querySelector("#rightnow").textContent=brojac;
+              // interval=setInterval(crveno,10);
+                //setInterval(red,1000);
+            }
+            else{
+                messege("😱Too small");
+                brojac--;
+                document.querySelector("#rightnow").textContent=brojac;
+               // sinterval=setInterval(ssino,10);
+            }
+        }
+    }
+})
+document.querySelector("#again").addEventListener('click',function (){
+    let number=document.getElementById("number");
+    number.value="";
+    number.disabled=false;
+    document.querySelector("body").style.background="#222";
+    random=Math.floor(Math.random()*20)+1;
+    document.querySelector("#rightnow").textContent=20;
+    messege("Start guessing...");
+    console.log(random);
+    brojac=20;
+    document.querySelector("#the_number").textContent="?";
+    document.querySelector("#check").disabled=false;
+
+})
+/*function crveno(){
+    if(counter<10){
+        document.querySelector("body").style.background="orange";
+        counter++;
+    }
+    else{
+        document.querySelector("body").style.background="#222";
+        clearInterval(interval);
+        counter=0;
+    }
+    //counter++;
+}
+function ssino(){
+    if(sino<10){
+        document.querySelector("body").style.background="blue";
+        sino++;
+    }
+    else{
+        document.querySelector("body").style.background="#222";
+        clearInterval(sinterval);
+        sino=0;
+    }
+    //sino++;
+}
+function zzolto(){
+    if(zolto<10){
+        document.querySelector("body").style.background="yellow";
+        zolto++
+    }
+    else{
+        document.querySelector("body").style.background="#222";
+        clearInterval(zinterval);
+        zolto=0;
+    }
+   // zolto++;
+}*/
+
+
+</script>
+</body>
+</html>
